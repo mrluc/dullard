@@ -7,7 +7,7 @@ module Dullard
   SharedStringPath = 'xl/sharedStrings.xml'
   StylesPath = 'xl/styles.xml'
 
-  class Time < Struct.new('Time', :hours, :minutes, :seconds)
+  class Dullard::Time < Struct.new('Time', :hours, :minutes, :seconds)
   end
 
 end
