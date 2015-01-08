@@ -7,7 +7,7 @@ module Dullard
   SharedStringPath = 'xl/sharedStrings.xml'
   StylesPath = 'xl/styles.xml'
 
-  class Dullard::Time < Struct.new('Time', :hours, :minutes, :seconds)
+  class DullTime < Struct.new('Time', :hours, :minutes, :seconds)
   end
 
 end
@@ -281,7 +281,7 @@ class Dullard::Sheet
     hours = (float * 24).floor
     minutes = (float * 24 * 60).floor % 60
     seconds = (float * 24 * 60 * 60).floor % 60
-    Dullard::Time.new(hours, minutes, seconds)
+    Dullard::DullTime.new(hours, minutes, seconds)
   end
 
   def process_row(cell_map)
